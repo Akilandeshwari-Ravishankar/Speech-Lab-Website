@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Data Collection</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    <!-- Using opus recorder -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/opus-recorder/8.0.5/recorder.min.js" integrity="sha512-83I0cNDDOAPu8RFyQC7TpQugOT/WU4xIKoxllvP9+T11HpDDm6Dl9fkDM7z4AwX/uCCM6SX1+yDmRHUWjUnjQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/opus-recorder/8.0.5/decoderWorker.min.js" integrity="sha512-zMeBSLnnrP44M/YmP8fSA2Dq+dwJ7g6UFgL+rSSht+CJx/EtZrya0UI17JGY0eaVuJj3pJFHTGR/PJkj5/baWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/opus-recorder/8.0.5/encoderWorker.min.js" integrity="sha512-p1mFQi5mOMjKc5K7TLnSCnq5ZqO1k3Phkf9m5hFI8fT+WCqhpNFRFw+UsoqcmSMVHlzHlIYKGRFftUml4tbb5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/opus-recorder/8.0.5/waveWorker.min.js" integrity="sha512-kKU4/frJbcqjtj3CCvjktDp00y9d2YXiFS71UissG0PcGa40AcnH5mEoqHo+9JaBSH0y8soxcWIlqwjUIVWyvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  </head>
+<body>
+    <nav>
+        Speech Data Collection
+    </nav>
+
+    <div class="body-card">
+        <div class="record">
+            <p id="recording-text">Click on the microphone to record</p>
+            <button id="btn-record"><i class="fa fa-microphone"></i></button>
+            <div id="recording-btns">
+                <button id="btn-pause">Pause</button>
+                <button id="btn-stop">Stop</button>
+            </div>
+        </div>
+    </div>
+    <div class="recordings-card">
+        <div class="display-recordings">
+            <div class="section-header">Your Recordings</div>
+            <ul id="recordings-list">
+            </ul>
+            <!-- <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                </tbody>
+            </table>             -->
+        </div>
+        <!-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#submitModal">Submit</button> -->
+        <button id="btn-submit" data-bs-toggle="modal" data-bs-target="#submitModal">Submit</button>
+        <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter your details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form style="text-align: left;">
+                  <div class="mb-3">
+                    <!-- <label for="inputName" class="form-label">Name</label> -->
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="institution" placeholder="Institution">
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="inputName" placeholder="Email Address">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="recorder.js"></script>
+</body>
+</html>
