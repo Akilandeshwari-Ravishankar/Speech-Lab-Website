@@ -26,13 +26,8 @@ nav {
     margin-bottom: 20px;
 }
 
-#btn-record-outer {
-    background: transparent;
-    border: 1px solid grey;
-    border-radius: 50%;
-}
-
 #btn-record {
+    display: inline-block;
     font-size: 26px !important; 
     border-radius: 50%;
     border: 1px solid #909090;
@@ -43,10 +38,14 @@ nav {
 }
 
 #btn-record:hover {
-    border: 1px solid #2056AC;
+    border: 2px solid #2056AC;
     color: #2056AC;
     cursor: pointer;
     margin-bottom: 25px;
+}
+
+#btn-record:hover i {
+    color: #2056AC;
 }
 
 .btn-record-active {
@@ -54,6 +53,13 @@ nav {
     color: red;
     cursor: pointer;
     margin-bottom: 25px;
+}
+
+#elapsed-time {
+    display: none;
+    font-size: 30px;
+    color: red;
+    margin-bottom: 20px;
 }
 
 #recording-btns {
@@ -96,7 +102,8 @@ nav {
     color: white;
 }
 
-.recordings-card {
+#recordings-card {
+    display: none;
     margin: 30px 5%; 
     background-color: white;
     min-height: fit-content;
@@ -112,7 +119,13 @@ nav {
 }
 
 .table {
-    margin-top: 50px;
+    margin: auto;
+    width: auto !important;
+}
+
+.table th, td {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #recordings-list {
@@ -122,6 +135,20 @@ nav {
 
 #recordings-list li {
     margin-top: 15px;
+}
+
+.btn-delete {
+    color: gray;
+    background: transparent;
+    border: none;
+}
+
+.btn-delete i {
+    font-size: 20px;     
+}
+
+.btn-delete:hover {
+    color: red;
 }
 
 #btn-submit {
@@ -142,5 +169,3 @@ nav {
     background: #2056AC;
     color: white;
 }
-
-
